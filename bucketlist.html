@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bucket List</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+    }
+
+    header h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .bucket-item {
+      font-size: 1.3rem;
+      margin: 15px 0;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .bucket-item p {
+      margin: 0;
+    }
+
+    .bucket-item .done {
+      color: green;
+      font-weight: bold;
+    }
+
+    .bucket-item .not-done {
+      color: red;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1><a href="index.html">Sourav Jha</a></h1>
+      <nav>
+        <ul>
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="bucketlist">
+    <div class="container">
+      <h2>List 100</h2>
+      <p>These are things I wanna do, some might be easy, funny, or random. I'll keep updating this list over time 😃</p>
+      
+      <!-- Bucket List Item 1 -->
+      <div class="bucket-item">
+        <p>1. Skydiving - <span class="done">✔</span></p>
+      </div>
+
+      <!-- Bucket List Item 2 -->
+      <div class="bucket-item">
+        <p>2. Learn to play guitar - <span class="done">✔</span></p>
+      </div>
+
+      <!-- Bucket List Item 3 -->
+      <div class="bucket-item">
+        <p>3. Travel to Japan - <span class="not-done">✘</span></p>
+      </div>
+
+      <!-- Bucket List Item 4 -->
+      <div class="bucket-item">
+        <p>4. Build my own startup - <span class="not-done">✘</span></p>
+      </div>
+
+      <!-- Bucket List Item 5 -->
+      <div class="bucket-item">
+        <p>5. Swim with dolphins - <span class="not-done">✘</span></p>
+      </div>
+
+      <!-- Add more items as needed -->
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Sourav. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

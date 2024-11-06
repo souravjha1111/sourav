@@ -1,0 +1,171 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* Header */
+header {
+  background-color: #222;
+  padding: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #fff;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #ccc;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* Section Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* About Section */
+#about {
+  padding: 40px 0;
+  background-color: #333;
+}
+
+#about h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 18px;
+  color: #bbb;
+}
+
+.social-links a {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Bucket List Section */
+#bucketlist {
+  padding: 40px 0;
+  background-color: #222;
+}
+
+#bucketlist h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#bucketlist ul {
+  list-style-type: none;
+}
+
+.bucket-item {
+  font-size: 18px;
+  color: #ccc;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  background-color: #444;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+progress[value] {
+  background-color: #444;
+  color: #888;
+}
+
+#bucketlist li {
+  margin-bottom: 20px;
+}
+
+#bucketlist span {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* Blog Section */
+#blog {
+  padding: 40px 0;
+  background-color: #333;
+}
+
+#blog h2 {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+#blog article {
+  margin-bottom: 30px;
+}
+
+#blog article h3 {
+  font-size: 24px;
+  color: #fff;
+}
+
+#blog article p {
+  font-size: 18px;
+  color: #bbb;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: #111;
+  text-align: center;
+}
+
+footer p {
+  color: #888;
+  font-size: 14px;
+}
