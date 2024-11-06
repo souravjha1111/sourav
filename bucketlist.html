@@ -3,261 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Man Upstairs</title>
+  <title>Bucket List</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .about-me {
-      color: #fff;
-      font-family: Arial, sans-serif;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .about-me h2 {
-      font-size: 2rem;
-      color: #ddd;
-      text-transform: uppercase;
-      margin-bottom: 20px;
-    }
-
-    .social-links a {
-      color: #fff;
-      text-decoration: none;
-      margin-right: 20px;
-      font-size: 1.2rem;
-    }
-
-    .social-links a:hover {
-      color: #aaa;
-    }
-
-    /* Quote Section */
-    #quote-section {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    #quote-section button {
-      background-color: #3498db;
-      color: white;
-      font-size: 1.1rem;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    #quote-section button:hover {
-      background-color: #2980b9;
-    }
-
-    #quote-text {
-      font-size: 1.5rem;
-      margin-top: 20px;
-      font-style: italic;
-      color: #ddd;
-    }
-  </style>
 </head>
 <body>
   <header>
     <div class="header-container">
-      <h1>Sourav Jha</h1>
-      <nav>
-        <ul>
-          <li><a href="bucketlist.html">Bucket List</a></li>
-        </ul>
-      </nav>
+      <h1><a href="index.html">Sourav Jha</a></h1>
     </div>
   </header>
 
-  <section id="quote-section">
-    <button id="quote-button">Get Quote of the Week</button>
-    <p id="quote-text"></p>
-  </section>
-
-  <section id="about">
-    <div class="container about-me">
-      <h2>About Me</h2>
-      <p>
-        Hey, I'm Sourav! 🌟 If I’m not coding, I’m probably somewhere hiking up a mountain 🏞️, smashing a cricket ball 🏏, or debating with friends on how coffee is the secret to world peace ☕. But here's the real kicker – I’m *absolutely nuts* for startup ideas! 🚀 If you have one, I’m your guy. Let’s brainstorm, strategize, and make it happen. I believe in collaboration and turning big ideas into reality, so hit me up if you're into that too!
-      </p>
-      <p>
-        When I’m not running marathons 🏃‍♂️ (or trying to at least), you’ll find me working on making my software solutions sleek, efficient, and ready for the next big challenge. I’ve had the privilege of working with <strong>5 amazing startups</strong> so far, building innovative tech solutions and learning from the best in the game.
-      </p>
-      <p>
-        I’m well-versed in Python, TypeScript, JavaScript, and frameworks like Django, Next.js, Flask, and Selenium. But here’s the kicker – I’m also into low-level design (LLD), so while I love to build big, I also obsess over making things efficient and lean with minimal memory usage. <strong>Efficiency is my middle name</strong> (not literally, but you get it). 🔧
-      </p>
-      <p>
-        So, whether it's building a web app, solving complex problems, or just chatting about the future of tech and startups – I’m always up for something exciting. Let's connect, collaborate, and make some magic happen. 🪄
-      </p>
-      <div class="social-links">
-        <a href="https://x.com/souravjha_" target="_blank">X (Twitter)</a>
-        <a href="https://www.linkedin.com/in/souravjha1111" target="_blank">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <footer>
+  <section id="bucketlist">
     <div class="container">
-      <p>&copy; 2024 Sourav. All rights reserved. Crafted with code, coffee, and startup dreams.</p>
+      <h2>Bucket List</h2>
+      <p>These are the things I want to do! Some are easier, some are more random or wild! I'll keep updating this list as I go. 😃</p>
+      
+      <div id="bucketlist-items"></div>
+      
     </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2024 Sourav Jha. All rights reserved.</p>
   </footer>
 
   <script>
-    // Array of quotes
+    // Define bucket list items as an array of objects
+    const bucketList = [
+      { item: "Learn Spanish", done: true },
+      { item: "Live in another country", done: true },
+      { item: "Start a nonprofit organization", done: false },
+      { item: "Be in a movie/commercial (I’ve actually done this in 3 countries: Vietnam, India, US)", done: true },
+      { item: "Teach a graduate-level course", done: true },
+      { item: "Start a company", done: true },
+      { item: "Fall in love", done: true },
+      { item: "Build a home (a simple one, but it’s mine)", done: true },
+      { item: "Go on a trip overseas with my whole family", done: true },
+      { item: "Be in a submarine", done: true },
+      { item: "Learn to ski", done: true },
+      { item: "Surf in Hawaii", done: true },
+      { item: "Fly an airplane", done: true },
+      { item: "Learn to drive a car", done: true },
+      { item: "Dance on stage at a concert (thanks Flo Rida!)", done: true },
+      { item: "Publish a Python package", done: true },
+      { item: "Take a walk in the rain", done: true },
+      { item: "Eat at a 3 Michelin star restaurant", done: true },
+      { item: "Ask a stranger out (he said no)", done: true },
+      { item: "Invite a stranger to my home (CouchSurfing)", done: true },
+      { item: "Sleep outside on the beach, under the sky (Eilat, Israel)", done: true },
+      { item: "Go on an African safari", done: true },
+      { item: "Camp in a desert", done: true },
+      { item: "Learn to salsa", done: true },
+      { item: "Work in a casino", done: true },
+      { item: "Do stand-up", done: true },
+      { item: "Travel Southeast Asia", done: true },
+      { item: "Hitchhike across Africa (Egypt to Mozambique)", done: true },
+      { item: "Hike Los Andes", done: true },
+      { item: "Visit South Omo valley, Ethiopia", done: true },
+      { item: "See Kashmir", done: true },
+      { item: "Climb Great Pyramid of Giza, Egypt", done: true },
+      { item: "Watch a Broadway show in New York", done: true },
+      { item: "Pashut Festival, Israel", done: true },
+      { item: "Watch bullfight in Spain", done: false },
+      { item: "Visit Googleplex", done: true },
+      { item: "See a comet", done: true },
+      { item: "Meet Dalai Lama", done: true },
+      { item: "Be awesome", done: false },
+      { item: "Be kind", done: false }
+    ];
 
-// Array of quotes
-const quotes = {
-  naval: [
-    "The most important skill for getting rich is becoming a perpetual learner. Always be learning.",
-    "Desire is a contract you make with yourself to be unhappy until you get what you want.",
-    "The world is always changing, and that means new opportunities arise daily. The best opportunities often come from unconventional sources."
-  ],
-  steveJobs: [
-    "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.",
-    "Innovation distinguishes between a leader and a follower.",
-    "Stay hungry, stay foolish."
-  ],
-  kafka: [
-    "A book must be the axe for the frozen sea within us.",
-    "I cannot make you understand. I cannot make anyone understand what is happening inside me. I cannot even explain it to myself.",
-    "I am a cage, in search of a bird."
-  ],
-  marcusAurelius: [
-    "The happiness of your life depends upon the quality of your thoughts.",
-    "Waste no more time arguing what a good man should be. Be one.",
-    "You have power over your mind, not outside events. Realize this, and you will find strength."
-  ],
-  socrates: [
-    "The unexamined life is not worth living",
-    "There is only one good, knowledge, and one evil, ignorance",
-    "The only thing I know is that I know nothing"
-  ],
-  wittgenstein: [
-    "Whereof one cannot speak, thereof one must be silent",
-    "Philosophy is a battle against the bewitchment of our intelligence by means of language",
-    "I don’t know why we are here, but I’m pretty sure it is not in order to enjoy ourselves"
-  ],
-  ockham: [
-    "Entities should not be multiplied unnecessarily"
-  ],
-  hobbes: [
-    "The life of man (in a state of nature) is solitary, poor, nasty, brutish, and short",
-    "Leisure is the mother of philosophy"
-  ],
-  descartes: [
-    "I think therefore I am",
-    "One cannot conceive anything so strange and so implausible that it has not already been said by one philosopher or another",
-    "If you would be a real seeker after truth, it is necessary that at least once in your life you doubt, as far as possible, all things"
-  ],
-  heidegger: [
-    "He who thinks great thoughts, often makes great errors"
-  ],
-  marx: [
-    "Religion is the sign of the oppressed ... it is the opium of the people",
-    "Philosophers have hitherto only interpreted the world in various ways; the point, however, is to change it"
-  ],
-  nietzsche: [
-    "God is dead! He remains dead! And we have killed him.",
-    "Is man merely a mistake of God's? Or God merely a mistake of man's?",
-    "Everything that exists is born for no reason, carries on living through weakness, and dies by accident"
-  ],
-  camus: [
-    "There is but one truly serious philosophical problem, and that is suicide"
-  ],
-  heraclitus: [
-    "One cannot step twice in the same river"
-  ],
-  aristotle: [
-    "We are what we repeatedly do. Excellence, then, is not an act, but a habit",
-    "Happiness is the highest good",
-    "The brave man is he who overcomes not only his enemies but his pleasures"
-  ],
-  mill: [
-    "The greatest happiness of the greatest number is the foundation of morals and legislation",
-    "Liberty consists in doing what one desires",
-    "To do as one would be done by, and to love one's neighbor as oneself, constitute the ideal perfection of utilitarian morality"
-  ],
-  berkeley: [
-    "To be is to be perceived"
-  ],
-  kant: [
-    "Happiness is not an ideal of reason but of imagination",
-    "Metaphysics is a dark ocean without shores or lighthouse, strewn with many a philosophic wreck",
-    "Morality is not the doctrine of how we may make ourselves happy, but of how we may make ourselves worthy of happiness"
-  ],
-  locke: [
-    "No man's knowledge here can go beyond his experience",
-    "It is one thing to show a man that he is in error, and another to put him in possession of truth",
-    "The mind is furnished with ideas by experience alone"
-  ],
-  machiavelli: [
-    "God is not willing to do everything, and thus take away our free will and that share of glory which belongs to us"
-  ],
-  russell: [
-    "It is undesirable to believe a proposition when there is no ground whatever for supposing it true",
-    "This is patently absurd; but whoever wishes to become a philosopher must learn not to be frightened by absurdities",
-    "I would never die for my beliefs because I might be wrong",
-    "Science is what you know. Philosophy is what you don't know"
-  ],
-  seneca: [
-    "Even while they teach, men learn",
-    "Virtue is nothing else than right reason"
-  ],
-  spinoza: [
-    "I can control my passions and emotions if I can understand their nature",
-    "If men were born free, they would, so long as they remained free, form no conception of good and evil"
-  ],
-  kierkegaard: [
-    "The function of prayer is not to influence God, but rather to change the nature of the one who prays",
-    "Life must be understood backward. But it must be lived forward"
-  ],
-  rousseau: [
-    "Man is born free, but is everywhere in chains"
-  ],
-  diderot: [
-    "Man will never be free until the last king is strangled with the entrails of the last priest"
-  ],
-  plato: [
-    "You can discover more about a person in an hour of play than in a year of conversation",
-    "That man is wisest who, like Socrates, realizes that his wisdom is worthless"
-  ],
-  bacon: [
-    "Things alter for the worse spontaneously, if they be not altered for the better designedly",
-    "A little philosophy inclineth man's mind to atheism; but depth in philosophy bringeth men’s minds about to religion"
-  ],
-  thucydides: [
-    "History is Philosophy teaching by examples"
-  ],
-  anaxagoras: [
-    "In everything, there is a share of everything"
-  ],
-  democritus: [
-    "The brave man is he who overcomes not only his enemies but his pleasures"
-  ],
-  protagoras: [
-    "Man is the measure of all things"
-  ],
-  augustine: [
-    "We are too weak to discover the truth by reason alone"
-  ]
-};
-    // Function to get random quote
-    function getRandomQuote() {
-      const sources = Object.keys(quotes);
-      const randomSource = sources[Math.floor(Math.random() * sources.length)];
-      const randomQuote = quotes[randomSource][Math.floor(Math.random() * quotes[randomSource].length)];
-      return randomQuote;
+    // Function to generate the bucket list items
+    function generateBucketList() {
+      const listContainer = document.getElementById("bucketlist-items");
+
+      bucketList.forEach((entry, index) => {
+        const itemElement = document.createElement("div");
+        itemElement.classList.add("bucket-item");
+
+        // Create numbered list with either a checkmark or cross
+        const statusSymbol = entry.done ? "✓" : "✘";
+        const statusClass = entry.done ? "done" : "not-done";
+        itemElement.innerHTML = `<p><span class="number">${index + 1}.</span> ${entry.item} <span class="status ${statusClass}">${statusSymbol}</span></p>`;
+        
+        listContainer.appendChild(itemElement);
+      });
     }
 
-    // Function to handle button click and display quote
-    document.getElementById('quote-button').addEventListener('click', () => {
-      const userQuote = localStorage.getItem("userQuote"); // Retrieve custom quote from local storage (if any)
-      const quoteToDisplay = userQuote ? userQuote : getRandomQuote();
-      document.getElementById('quote-text').textContent = quoteToDisplay;
-    });
+    // Call the function to populate the list
+    generateBucketList();
   </script>
 
 </body>
